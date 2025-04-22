@@ -1,10 +1,13 @@
 # Marketing-Campaign-Success-Estimation-Model
+
 Deployment 🚀
+
 Using the final model, I generated income predictions for the income_deploy dataset.
 Everything was already preprocessed the same way, so I just applied the trained model and got the results ready for use ✅
 The model is now ready to be integrated wherever needed — whether it's for reporting, dashboards, or further analysis 📦
 
 Modeling Steps ⚙️
+
 I built the model in three versions:
 1.	Default model – with standard parameters
 2.	Importance-based model – trained using all features
@@ -13,6 +16,7 @@ For each version, I evaluated performance using Gini, Precision, and Recall 📊
 ✅ In the optimized model, I only kept features with importance above 5% — keeping it clean, relevant, and effective.
 
 Random Forest Classification with Feature Importance Selection 🌲
+
 After training the initial Random Forest model, I analyzed feature importances to understand which variables were truly making an impact.
 ✅ I selected only those independent features that:
 •	Had an importance score above 10%
@@ -20,6 +24,7 @@ After training the initial Random Forest model, I analyzed feature importances t
 Then, I rebuilt the model using just these strong features — resulting in a more focused, efficient, and interpretable classifier ⚡
 
 Hyperparameter Tuning Setup 🎯
+
 To improve model performance, I used RandomizedSearchCV with a custom grid of hyperparameters:
 •	🌲 n_estimators: Number of trees in the forest (200 to 1000)
 •	🔍 max_features: How many features to consider at each split (sqrt, 0.3, 0.5, or all)
@@ -29,10 +34,12 @@ To improve model performance, I used RandomizedSearchCV with a custom grid of hy
 This random grid helps explore different model configurations and find the most effective one without trying every possible combo 🔄
 
 Univariate Analysis 🔍
+
 Univariate analysis looks at each feature individually to see how well it explains the target variable.
 It helps identify the most informative and stable predictors to include in the model ✅
 
 Final Model 🧠
+
 The final model was built using only the most impactful features, selected based on performance and stability.
 This approach ensures a model that is both accurate and efficient, without unnecessary complexity ✅
 
