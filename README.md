@@ -3,6 +3,7 @@ Deployment 🚀
 Using the final model, I generated income predictions for the income_deploy dataset.
 Everything was already preprocessed the same way, so I just applied the trained model and got the results ready for use ✅
 The model is now ready to be integrated wherever needed — whether it's for reporting, dashboards, or further analysis 📦
+
 Modeling Steps ⚙️
 I built the model in three versions:
 1.	Default model – with standard parameters
@@ -10,12 +11,14 @@ I built the model in three versions:
 3.	Optimized model – focused only on the most impactful variables
 For each version, I evaluated performance using Gini, Precision, and Recall 📊
 ✅ In the optimized model, I only kept features with importance above 5% — keeping it clean, relevant, and effective.
+
 Random Forest Classification with Feature Importance Selection 🌲
 After training the initial Random Forest model, I analyzed feature importances to understand which variables were truly making an impact.
 ✅ I selected only those independent features that:
 •	Had an importance score above 10%
 •	Did not cause overfitting (i.e., had balanced train vs. test performance)
 Then, I rebuilt the model using just these strong features — resulting in a more focused, efficient, and interpretable classifier ⚡
+
 Hyperparameter Tuning Setup 🎯
 To improve model performance, I used RandomizedSearchCV with a custom grid of hyperparameters:
 •	🌲 n_estimators: Number of trees in the forest (200 to 1000)
@@ -24,12 +27,15 @@ To improve model performance, I used RandomizedSearchCV with a custom grid of hy
 •	✂️ min_samples_split: Min samples needed to split a node (20 or 50)
 •	🍃 min_samples_leaf: Min samples at each leaf (5, 8, or 10)
 This random grid helps explore different model configurations and find the most effective one without trying every possible combo 🔄
+
 Univariate Analysis 🔍
 Univariate analysis looks at each feature individually to see how well it explains the target variable.
 It helps identify the most informative and stable predictors to include in the model ✅
+
 Final Model 🧠
 The final model was built using only the most impactful features, selected based on performance and stability.
 This approach ensures a model that is both accurate and efficient, without unnecessary complexity ✅
+
 Deployment 🚀
 Using the final trained model, I calculated the probability of interest for each record in the test_data ✅
 Only the features the model was trained on were used — ensuring consistency and reliable predictions 📊🔐
