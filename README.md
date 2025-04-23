@@ -1,10 +1,6 @@
 # Marketing-Campaign-Success-Estimation-Model
 
-Deployment 🚀
 
-Using the final model, I generated income predictions for the income_deploy dataset.
-Everything was already preprocessed the same way, so I just applied the trained model and got the results ready for use ✅
-The model is now ready to be integrated wherever needed — whether it's for reporting, dashboards, or further analysis 📦
 
 Modeling Steps ⚙️
 
